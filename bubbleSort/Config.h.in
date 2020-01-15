@@ -1,0 +1,3 @@
+// the configured options and settings for bubbleSort
+#define bubbleSort_VERSION_MAJOR  @bubbleSort_VERSION_MAJOR@
+#define bubbleSort_VERSION_MINOR  @bubbleSort_VERSION_MINOR@

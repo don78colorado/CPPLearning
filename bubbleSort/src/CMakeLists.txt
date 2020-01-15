@@ -1,0 +1,8 @@
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+include_directories( ${PROJECT_SOURCE_DIR}/src)
+set (HEADER_FILES ${PROJECT_SOURCE_DIR}/src/util.h ${PROJECT_SOURCE_DIR}/src/bubbleSort.h ${PROJECT_SOURCE_DIR}/src/mergeSort.h)
+set (SOURCES ${PROJECT_SOURCE_DIR}/src/mergeSort.cpp ${PROJECT_SOURCE_DIR}/src/bubbleSort.cpp ${PROJECT_SOURCE_DIR}/src/bubbleSort_impl.tcc ${PROJECT_SOURCE_DIR}/src/bubbleSort.h)
+add_subdirectory(test)
+add_library(bubblesort ${SOURCES} ${HEADER_FILES})
+add_executable(bubbleSort main.cpp ${SOURCES} ${HEADER_FILES})
+target_link_libraries (bubbleSort bubblesort)
